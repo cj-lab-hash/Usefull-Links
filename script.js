@@ -10,13 +10,13 @@ function startTime() {
   m = m < 10 ? '0' + m : m;
   s = s < 10 ? '0' + s : s;
 
-  // Blink: show seconds only on even ticks
-  const showSeconds = today.getSeconds() % 2 === 0;
-  const timeString = showSeconds ? `${h}:${m}:${s} ${ampm}` : `${h}:${m} ${ampm}`;
+  // Blink colons every second
+  const colon = today.getSeconds() % 2 === 0 ? ":" : " ";
 
-  document.getElementById('time').textContent = timeString;
+  // Time with blinking colons
+  document.getElementById('time').textContent = `${h}${colon}${m}${colon}${s} ${ampm}`;
 
-  // shorter date
+  // Shorter date (e.g. Aug 31, 2025)
   document.getElementById('date').textContent = today.toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
@@ -34,4 +34,5 @@ startTime();
 document.addEventListener('DOMContentLoaded', () => {
   lucide.replace();
 });
+
 
