@@ -1,3 +1,5 @@
+import { loadVerseFromAPI } from './bible.js';
+
 function startTime() {
   const today = new Date();
   let h = today.getHours();
@@ -31,8 +33,11 @@ startTime();
 
 
 // Initialize Lucide icons
-document.addEventListener('DOMContentLoaded', () => {
-  lucide.replace();
+document.addEventListener("DOMContentLoaded", () => {
+  startTime();
+  loadVerseFromAPI();
+  
 });
+
 
 

@@ -24,6 +24,7 @@
     <span class="text-gray-400">|</span>
     <div id="date" class="text-sm text-gray-500"></div>
     </div>
+    
 
     <!-- Right: Quick Links -->
     <nav class="flex items-center gap-6">
@@ -47,12 +48,18 @@
 
   <!-- Section Pills -->
   <nav class="sticky top-0 z-10 bg-gray-50/90 backdrop-blur border-b">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap gap-2">
+    <!-- <div class="max-w-7xl mx-auto px-4 py-2 flex flex-wrap gap-2"> -->
+      <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
       <a href="#hardware" class="px-3 py-1.5 rounded-full bg-white shadow text-sm hover:bg-indigo-50">Hardware</a>
       <a href="#reports" class="px-3 py-1.5 rounded-full bg-white shadow text-sm hover:bg-indigo-50">Reports</a>
       <a href="#tools" class="px-3 py-1.5 rounded-full bg-white shadow text-sm hover:bg-indigo-50">Tools</a>
       <a href="#hr" class="px-3 py-1.5 rounded-full bg-white shadow text-sm hover:bg-indigo-50">HR & Timekeeping</a>
       <a href="#quick" class="px-3 py-1.5 rounded-full bg-white shadow text-sm hover:bg-indigo-50">Quick Access</a>
+      
+      <div class="verse-card">
+        <div id="verseRef">
+        </div><div id="verseText"></div>
+      </div>
     </div>
   </nav>
 
@@ -216,7 +223,7 @@
           <i data-lucide="graduation-cap" class= "text-indigo-500"></i><span>Maxim U</span>
         </a>
         <a class="card" href="https://ews01.maxim-ic.com/orgchart/Index.aspx" target="_blank" rel="noopener">
-          <i data-lucide="sitemap" class= "text-indigo-500"></i><span>Org Chart</span>
+          <i data-lucide="network" class= "text-indigo-500"></i><span>Org Chart</span>
         </a>
         <a class="card" href="https://webtimesheet.maxim-ic.com/app/tss/controllers/index.php" target="_blank" rel="noopener">
           <i data-lucide="calendar-check-2" class= "text-indigo-500"></i><span>Webtime Sheet</span>
@@ -264,15 +271,11 @@
 
   <!-- Card style (Tailwind utility composition) -->
   <style>
-    .card {
-      @apply bg-white rounded-xl shadow hover:shadow-lg p-4 flex items-center gap-3;
-    }
-    .card span {
-  @apply text-[13px] font-medium;
-}
+    
   </style>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="bible.js"></script>
   <script>
   lucide.createIcons();
 </script>

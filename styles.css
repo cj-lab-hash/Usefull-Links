@@ -3,9 +3,51 @@
 }
 
 .card {
-  @apply flex flex-col items-center justify-center p-3 bg-white rounded-lg shadow hover:shadow-lg transition text-[13px] font-medium;
+  @apply flex flex-col items-center justify-center text-center p-4 bg-white rounded-xl shadow hover:shadow-lg transition;
+}
+
+.card span {
+  @apply text-sm font-medium leading-tight text-center;
 }
 
 .card i {
-  @apply w-4 h-4 mb-2; /* Smaller icon, 16px */
+  @apply w-6 h-6 mb-2 text-indigo-500 block;
+}
+
+.verse-container {
+  display: grid;
+  align-items: start;
+  justify-content: center;
+  margin: 0;
+}
+
+.verse-card {
+  width: 100%;
+  max-width: 620px;
+  background: #ffffff;
+  border-left: 5px solid #28a745;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 12px;
+  opacity: 0.92;
+  font-weight: bold;
+  margin: 10px;
+  text-align: auto;
+  box-sizing: border-box;
+}
+
+.verse-ref {
+  font-weight: bold;
+  color: #155724;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.verse-text {
+  font-size: 12px;
+  color: #333;
 }
